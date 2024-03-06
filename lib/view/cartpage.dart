@@ -18,19 +18,19 @@ class _CartpageState extends State<Cartpage> {
     final provider = CardProvider.of(context);
     final finalList = provider.cart;
 
-    //
-    // _buildproductQuantity(IconData icon, int index){
-    //   return GestureDetector(
-    //     onTap: (){
-    //       setState(() {
-    //         icon == Icons.add
-    //             ? provider.incrementt(index)
-    //             : provider.decriment(index);
-    //       });
-    //     },
-    //   );
-    //
-    // }
+
+    _buildproductQuantity(IconData icon, int index){
+      return GestureDetector(
+        onTap: (){
+          setState(() {
+            icon == Icons.add
+                ? provider.incrementt(index)
+                : provider.decriment(index);
+          });
+        },
+      );
+
+    }
     return  Scaffold(
       body: Column(
         children: [
